@@ -1,9 +1,5 @@
 import '../App.css';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import {
-  BrowserRouter as Router,
-  Link
-} from 'react-router-dom'
 
 const NavBar = () => {
   return (
