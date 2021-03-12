@@ -15,7 +15,7 @@ import ForgotPassword from "./components/ForgotPassword";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{ fontFamily: "Varela Round" }}>
       <AuthProvider>
         <NavBar />
         <Router>
