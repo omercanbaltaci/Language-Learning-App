@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import NavBar from "./components/NavBar";
 import Stories from "./components/Stories";
 import Flashcards from "./components/Flashcards";
@@ -8,8 +9,6 @@ import SignUp from "./components/SignUp";
 import Dashboard from "./components/Dashboard";
 import { AuthProvider } from "./contexts/AuthContext";
 import { PlayContextProvider } from "./contexts/PlayContext";
-
-import React from "react";
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";

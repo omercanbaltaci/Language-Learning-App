@@ -53,13 +53,19 @@ const MyCard = ({ story, filename }) => {
             <Modal.Title>{story.title}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <Button onClick={incrementPlayIndex}>başlat</Button>
+            <div
+              className="d-flex align-items-center justify-content-center"
+              style={{ marginBottom: "1rem" }}
+            >
+              <Button onClick={incrementPlayIndex}>Play</Button>
+            </div>
             <div className="card-group">
-              {story.body.split(" ").map((word, idx) => (
+              {story.body.split(" ").map((word, idx, color) => (
                 <MyWordCard
                   len={story.body.split(" ").length}
                   idx={idx}
                   word={word}
+                  color={idx <= playIndex ? "dark" : "secondary"}
                 />
               ))}
             </div>
