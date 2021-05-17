@@ -1,13 +1,14 @@
-import React, { useEffect, useContext } from "react";
+import React, { useEffect, useContext, useState } from "react";
 import { PlayContext } from "../contexts/PlayContext";
 import { Card } from "react-bootstrap";
 import { Translator, Translate } from "react-auto-translate";
 import { useSpeechSynthesis } from "react-speech-kit";
+import { useAuth } from "../contexts/AuthContext";
+import app from "../Firebase";
 
-const MyWordCard = ({ idx, word, len, color }) => {
-  const { playIndex, incrementPlayIndex, resetPlayIndex } = useContext(
-    PlayContext
-  );
+const MyWordCard = ({ idx, word, len, color, body }) => {
+  const { playIndex, rate, incrementPlayIndex, resetPlayIndex, resetRate } =
+    useContext(PlayContext);
 
   const onEnd = () => {
     incrementPlayIndex();
@@ -17,15 +18,53 @@ const MyWordCard = ({ idx, word, len, color }) => {
     onEnd,
   });
 
+  const { currentUser, logout } = useAuth();
+  const ref = app.firestore().collection("learned-words");
+
   useEffect(() => {
     if (playIndex === len) {
       resetPlayIndex();
+      resetRate();
     }
     if (playIndex === idx) {
       let tempWord = fixWord(word);
-      speak({ text: tempWord });
+      speak({ text: tempWord, rate });
+      if (idx + 1 === len) {
+        updateDoc();
+      }
     }
   }, [playIndex]);
+
+  async function updateDoc() {
+    const doc = await ref.doc(currentUser.email).get();
+    if (!doc.exists) {
+      const learnedWords = [];
+      body
+        .split(" ")
+        .map((thisWord) =>
+          learnedWords.includes(fixWord(thisWord))
+            ? console.log("geç")
+            : learnedWords.push(fixWord(thisWord))
+        );
+      let data = {
+        learnedWords,
+      };
+      await ref.doc(currentUser.email).set(data);
+    } else {
+      const learnedWords = doc.data().learnedWords;
+      body
+        .split(" ")
+        .map((thisWord) =>
+          learnedWords.includes(fixWord(thisWord))
+            ? console.log("geç")
+            : learnedWords.push(fixWord(thisWord))
+        );
+      let data = {
+        learnedWords,
+      };
+      await ref.doc(currentUser.email).set(data);
+    }
+  }
 
   function fixWord(word_to_fix) {
     let empty = "";
@@ -56,7 +95,7 @@ const MyWordCard = ({ idx, word, len, color }) => {
             to="tr"
             googleApiKey="AIzaSyA0kr4ihZ-Uf9kxtl4BntyFDySEKpq_IbA"
           >
-            <Translate>{word}</Translate>
+            <Translate>{fixWord(word)}</Translate>
           </Translator>
         )}
       </Card.Footer>

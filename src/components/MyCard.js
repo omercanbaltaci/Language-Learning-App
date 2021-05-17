@@ -1,21 +1,26 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Card, Button, Modal } from "react-bootstrap";
+import { Card, Button, Modal, Form } from "react-bootstrap";
 import MyWordCard from "./MyWordCard";
-import app from "../Firebase";
 import { PlayContext } from "../contexts/PlayContext";
 import { useSpeechSynthesis } from "react-speech-kit";
+import RangeSlider from "react-bootstrap-range-slider";
 
-const MyCard = ({ story, filename }) => {
+const MyCard = ({ story }) => {
   const [show, setShow] = useState(false);
-  const [url, setUrl] = useState("");
-
   const { cancel } = useSpeechSynthesis();
+  const learnedWords = [];
 
-  const { playIndex, incrementPlayIndex, resetPlayIndex } = useContext(
-    PlayContext
-  );
-
-  const ref = app.storage().ref(filename);
+  const {
+    playIndex,
+    rate,
+    doneReading,
+    incrementPlayIndex,
+    userDoneReading,
+    changeRate,
+    resetPlayIndex,
+    resetRate,
+    resetDoneReading,
+  } = useContext(PlayContext);
 
   const handleClose = () => {
     cancel();
@@ -24,16 +29,9 @@ const MyCard = ({ story, filename }) => {
 
   const handleShow = () => {
     resetPlayIndex();
+    resetRate();
     setShow(true);
   };
-
-  async function getAudio() {
-    setUrl(await ref.getDownloadURL());
-  }
-
-  useEffect(() => {
-    getAudio();
-  }, []);
 
   return (
     <Card style={{ width: "48rem" }}>
@@ -58,14 +56,32 @@ const MyCard = ({ story, filename }) => {
               style={{ marginBottom: "1rem" }}
             >
               <Button onClick={incrementPlayIndex}>Play</Button>
+              <Form style={{ marginLeft: "10px", alignItems: "center" }}>
+                <Form.Group style={{ marginBottom: "0rem" }}>
+                  <div className="d-flex align-items-center justify-content-center">
+                    <Form.Label style={{ marginBottom: "0px" }}>
+                      Rate: {rate}
+                    </Form.Label>
+                  </div>
+                  <RangeSlider
+                    min="0.5"
+                    max="2"
+                    step="0.1"
+                    value={rate}
+                    onChange={(e) => changeRate(e.target.value)}
+                    tooltip="off"
+                  />
+                </Form.Group>
+              </Form>
             </div>
             <div className="card-group">
-              {story.body.split(" ").map((word, idx, color) => (
+              {story.body.split(" ").map((word, idx, color, body) => (
                 <MyWordCard
                   len={story.body.split(" ").length}
                   idx={idx}
                   word={word}
                   color={idx <= playIndex ? "dark" : "secondary"}
+                  body={story.body}
                 />
               ))}
             </div>

@@ -32,10 +32,7 @@ export default function Stories() {
       {stories.map((story) =>
         story.level === curLevel ? (
           <Row className="justify-content-md-center">
-            <MyCard
-              story={story}
-              filename={story.level + "." + story.index + ".mp3"}
-            />
+            <MyCard story={story} />
           </Row>
         ) : (
           <>
@@ -43,10 +40,7 @@ export default function Stories() {
               {handleLevelChange(story.level)}Level {curLevel}
             </h1>
             <Row className="justify-content-md-center">
-              <MyCard
-                story={story}
-                filename={story.level + "." + story.index + ".mp3"}
-              />
+              <MyCard story={story} />
             </Row>
           </>
         )
