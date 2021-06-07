@@ -93,7 +93,7 @@ const MyWordCard = ({ idx, word, len, color, body }) => {
           <Translator
             from="en"
             to="tr"
-            googleApiKey="AIzaSyA0kr4ihZ-Uf9kxtl4BntyFDySEKpq_IbA"
+            googleApiKey="AIzaSyDNG9TCIGt8T3j4mQ4KqfssQxHhh1QAdMI"
           >
             <Translate>{fixWord(word)}</Translate>
           </Translator>

@@ -13,13 +13,10 @@ const MyCard = ({ story }) => {
   const {
     playIndex,
     rate,
-    doneReading,
     incrementPlayIndex,
-    userDoneReading,
     changeRate,
     resetPlayIndex,
     resetRate,
-    resetDoneReading,
   } = useContext(PlayContext);
 
   const handleClose = () => {
