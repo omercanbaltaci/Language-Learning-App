@@ -1,0 +1,69 @@
+{
+  "data": [
+    {
+      "question": "You didn’t come to school yesterday. Where ... you?",
+      "choices": ["was", "were", "is", "are"],
+      "answer": "were"
+    },
+    {
+      "question": "Jonathan: Have you got a computer in your room? Lis: ...",
+      "choices": [
+        "No, I have got.",
+        "Yes, I don’t.",
+        "Yes, I have.",
+        "No, I do."
+      ],
+      "answer": "Yes, I have."
+    },
+    {
+      "question": "Student: ... you please repeat, sir? I couldn’t understand well.",
+      "choices": ["Can", "May", "Could", "Could not"],
+      "answer": "Could"
+    },
+    {
+      "question": "It is not permitted to open the door. Choose the sentence with the same meaning.",
+      "choices": [
+        "You don’t have to open the door.",
+        "You need to open the door.",
+        "You have to open the door.",
+        "You mustn’t open the door."
+      ],
+      "answer": "You mustn’t open the door."
+    },
+    {
+      "question": "If you have a head ache, you ... see a doctor.",
+      "choices": ["should", "would", "need", "could"],
+      "answer": "should"
+    },
+    {
+      "question": "There is a school party today. I ... to go, do you want to come?",
+      "choices": ["should", "would like", "must", "could"],
+      "answer": "would like"
+    },
+    {
+      "question": "While I was listening ... music, he got angry ... me.",
+      "choices": ["to/ with", "with/ to", " to/ to", "with/ with"],
+      "answer": "to/ with"
+    },
+    {
+      "question": "Choose the correct sentence.",
+      "choices": [
+        "I enjoy to play basketball.",
+        "She wants going outside.",
+        "Jonathan decided to study.",
+        "Camille suggests to travel."
+      ],
+      "answer": "Jonathan decided to study."
+    },
+    {
+      "question": "You need to ... the offer because it is not good for you.",
+      "choices": ["give up", "go on", "switch off", "turn down"],
+      "answer": "turn down"
+    },
+    {
+      "question": "He was very angry man. ... he was very soft to his children.",
+      "choices": ["Because", "However", "Therefore", "Or"],
+      "answer": "However"
+    }
+  ]
+}
