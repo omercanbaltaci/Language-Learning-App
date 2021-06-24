@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState,  useContext } from "react";
 import { Card, Button, Modal, Form } from "react-bootstrap";
 import MyWordCard from "./MyWordCard";
 import { PlayContext } from "../contexts/PlayContext";
@@ -8,7 +8,7 @@ import RangeSlider from "react-bootstrap-range-slider";
 const MyCard = ({ story }) => {
   const [show, setShow] = useState(false);
   const { cancel } = useSpeechSynthesis();
-  const learnedWords = [];
+  
 
   const {
     playIndex,

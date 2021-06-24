@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { PlayContext } from "../contexts/PlayContext";
 import { Card } from "react-bootstrap";
 import { Translator, Translate } from "react-auto-translate";
