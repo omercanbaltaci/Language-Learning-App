@@ -18,7 +18,7 @@ const MyWordCard = ({ idx, word, len, color, body }) => {
     onEnd,
   });
 
-  const { currentUser, logout } = useAuth();
+  const { currentUser } = useAuth();
   const ref = app.firestore().collection("learned-words");
 
   useEffect(() => {
@@ -93,7 +93,7 @@ const MyWordCard = ({ idx, word, len, color, body }) => {
           <Translator
             from="en"
             to="tr"
-            googleApiKey="AIzaSyDNG9TCIGt8T3j4mQ4KqfssQxHhh1QAdMI"
+            googleApiKey="AIzaSyD2OW2LitOVXAXFU9fqxdbaYqh0ZdbJqZg"
           >
             <Translate>{fixWord(word)}</Translate>
           </Translator>

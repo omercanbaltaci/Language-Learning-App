@@ -3,14 +3,17 @@ import "./Flashcards.scss";
 import "flip-card-wc";
 
 const FrontOfCard = ({ children }) => (
-  <div className="card" style={{ backgroundColor: "LightSkyBlue" }}>
-    <p>{children}</p>
+  <div
+    className="card"
+    style={{ backgroundColor: "LightSkyBlue", height: 100 }}
+  >
+    <p className="flashcardcss">{children}</p>
   </div>
 );
 
 const BackOfCard = ({ children }) => (
-  <div className="card" style={{ backgroundColor: "salmon" }}>
-    <p>{children}</p>
+  <div className="card" style={{ backgroundColor: "salmon", height: 100 }}>
+    <p className="flashcardcss">{children}</p>
   </div>
 );
 
