@@ -61,7 +61,7 @@ export default function Flashcards() {
                       <Translator
                         from="en"
                         to="tr"
-                        googleApiKey="AIzaSyD2OW2LitOVXAXFU9fqxdbaYqh0ZdbJqZg"
+                        googleApiKey={process.env.REACT_APP_GOOGLE_TRANSLATE}
                       >
                         <Translate>{x}</Translate>
                       </Translator>
