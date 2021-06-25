@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/language-learning-app/static/css/main.22689ff0.chunk.css",
+    "main.js": "/language-learning-app/static/js/main.a1033365.chunk.js",
+    "main.js.map": "/language-learning-app/static/js/main.a1033365.chunk.js.map",
+    "runtime-main.js": "/language-learning-app/static/js/runtime-main.bf50783b.js",
+    "runtime-main.js.map": "/language-learning-app/static/js/runtime-main.bf50783b.js.map",
+    "static/css/2.150d169a.chunk.css": "/language-learning-app/static/css/2.150d169a.chunk.css",
+    "static/js/2.6341e16e.chunk.js": "/language-learning-app/static/js/2.6341e16e.chunk.js",
+    "static/js/2.6341e16e.chunk.js.map": "/language-learning-app/static/js/2.6341e16e.chunk.js.map",
+    "static/js/3.4a010e08.chunk.js": "/language-learning-app/static/js/3.4a010e08.chunk.js",
+    "static/js/3.4a010e08.chunk.js.map": "/language-learning-app/static/js/3.4a010e08.chunk.js.map",
+    "index.html": "/language-learning-app/index.html",
+    "static/css/2.150d169a.chunk.css.map": "/language-learning-app/static/css/2.150d169a.chunk.css.map",
+    "static/css/main.22689ff0.chunk.css.map": "/language-learning-app/static/css/main.22689ff0.chunk.css.map",
+    "static/js/2.6341e16e.chunk.js.LICENSE.txt": "/language-learning-app/static/js/2.6341e16e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf50783b.js",
+    "static/css/2.150d169a.chunk.css",
+    "static/js/2.6341e16e.chunk.js",
+    "static/css/main.22689ff0.chunk.css",
+    "static/js/main.a1033365.chunk.js"
+  ]
+}
