@@ -47,32 +47,36 @@ export default function Flashcards() {
   return (
     <div>
       <ul>
-        {learned.length > 0
-          ? learned.map((word) => {
-              const x = random_item(learned);
-              if (!flag.includes(x)) {
-                flag.push(x);
-                count++;
-                if (count <= 20) {
-                  return (
-                    <MyFlashCards
-                      wordFront={x}
-                      wordBack={
-                        <Translator
-                          from="en"
-                          to="tr"
-                          googleApiKey="AIzaSyD2OW2LitOVXAXFU9fqxdbaYqh0ZdbJqZg"
-                        >
-                          <Translate>{x}</Translate>
-                        </Translator>
-                      }
-                      key={count}
-                    />
-                  );
-                }
-              } else console.log("geç");
-            })
-          : console.log("geç")}
+        {learned.length > 0 ? (
+          learned.map((word) => {
+            const x = random_item(learned);
+            if (!flag.includes(x)) {
+              flag.push(x);
+              count++;
+              if (count <= 20) {
+                return (
+                  <MyFlashCards
+                    wordFront={x}
+                    wordBack={
+                      <Translator
+                        from="en"
+                        to="tr"
+                        googleApiKey="AIzaSyD2OW2LitOVXAXFU9fqxdbaYqh0ZdbJqZg"
+                      >
+                        <Translate>{x}</Translate>
+                      </Translator>
+                    }
+                    key={count}
+                  />
+                );
+              }
+            } else console.log("geç");
+          })
+        ) : (
+          <h2 style={{ marginTop: "150px" }}>
+            You haven't learned any words. <br /> Read some stories first.
+          </h2>
+        )}
       </ul>
     </div>
   );
