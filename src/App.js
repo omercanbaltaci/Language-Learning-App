@@ -20,7 +20,7 @@ function App() {
       <AuthProvider>
         <PlayContextProvider>
           <NavBar />
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <div>
               <Switch>
                 <Route path="/stories" component={Stories} />
