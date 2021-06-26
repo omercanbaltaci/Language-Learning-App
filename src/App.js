@@ -10,7 +10,7 @@ import Dashboard from "./components/Dashboard";
 import { AuthProvider } from "./contexts/AuthContext";
 import { PlayContextProvider } from "./contexts/PlayContext";
 import { Container } from "react-bootstrap";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 
