@@ -10,7 +10,7 @@ import Dashboard from "./components/Dashboard";
 import { AuthProvider } from "./contexts/AuthContext";
 import { PlayContextProvider } from "./contexts/PlayContext";
 import { Container } from "react-bootstrap";
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import ForgotPassword from "./components/ForgotPassword";
 
@@ -20,12 +20,12 @@ function App() {
       <AuthProvider>
         <PlayContextProvider>
           <NavBar />
-          <Router basename="/">
+          <HashRouter>
             <div>
               <Switch>
                 <Route path="/stories" component={Stories} />
                 <Route path="/flashcards" component={Flashcards} />
-                <Route exact path="/quizzes" component={Quizzes} />
+                <Route path="/quizzes" component={Quizzes} />
               </Switch>
             </div>
             <Container
@@ -47,7 +47,7 @@ function App() {
                 </AuthProvider>
               </div>
             </Container>
-          </Router>
+          </HashRouter>
         </PlayContextProvider>
       </AuthProvider>
     </div>
