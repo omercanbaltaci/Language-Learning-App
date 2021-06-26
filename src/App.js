@@ -20,12 +20,12 @@ function App() {
       <AuthProvider>
         <PlayContextProvider>
           <NavBar />
-          <Router>
+          <Router basename="/">
             <div>
               <Switch>
                 <Route path="/stories" component={Stories} />
                 <Route path="/flashcards" component={Flashcards} />
-                <Route path="/quizzes" component={Quizzes} />
+                <Route exact path="/quizzes" component={Quizzes} />
               </Switch>
             </div>
             <Container
