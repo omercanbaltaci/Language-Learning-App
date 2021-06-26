@@ -20,7 +20,7 @@ function App() {
       <AuthProvider>
         <PlayContextProvider>
           <NavBar />
-          <HashRouter basename="/home">
+          <HashRouter>
             <div>
               <Switch>
                 <Route path="/stories" component={Stories} />
