@@ -12,7 +12,7 @@ const NavBar = () => {
 
   return currentUser ? (
     <Navbar collapseOnSelect="sm" bg="light" expand="lg">
-      <Navbar.Brand href="#home">Language Learning App</Navbar.Brand>
+      <Navbar.Brand href="/#home">Language Learning App</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
@@ -33,7 +33,7 @@ const NavBar = () => {
     </Navbar>
   ) : (
     <Navbar collapseOnSelect="sm" bg="light" expand="lg">
-      <Navbar.Brand href="home">Language Learning App</Navbar.Brand>
+      <Navbar.Brand href="/#home">Language Learning App</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
