@@ -17,15 +17,15 @@ const NavBar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <NavDropdown title="Activities" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/stories">Stories</NavDropdown.Item>
-            <NavDropdown.Item href="/flashcards">Flashcards</NavDropdown.Item>
-            <NavDropdown.Item href="/quizzes">Quizzes</NavDropdown.Item>
+            <NavDropdown.Item href="#stories">Stories</NavDropdown.Item>
+            <NavDropdown.Item href="#flashcards">Flashcards</NavDropdown.Item>
+            <NavDropdown.Item href="#quizzes">Quizzes</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end">
         <NavDropdown title={currentUser.email} id="basic-nav-dropdown">
-          <NavDropdown.Item href="home" onClick={handleLogout}>
+          <NavDropdown.Item href="#home" onClick={handleLogout}>
             Sign Out
           </NavDropdown.Item>
         </NavDropdown>
@@ -45,8 +45,8 @@ const NavBar = () => {
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse className="justify-content-end">
-        <Nav.Link href="signin">Sign In</Nav.Link>
-        <Nav.Link href="signup">Sign Up</Nav.Link>
+        <Nav.Link href="#signin">Sign In</Nav.Link>
+        <Nav.Link href="#signup">Sign Up</Nav.Link>
       </Navbar.Collapse>
     </Navbar>
   );
