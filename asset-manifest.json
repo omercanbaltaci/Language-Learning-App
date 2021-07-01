@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Language-Learning-App/static/css/main.22689ff0.chunk.css",
-    "main.js": "/Language-Learning-App/static/js/main.bd89ec5b.chunk.js",
-    "main.js.map": "/Language-Learning-App/static/js/main.bd89ec5b.chunk.js.map",
+    "main.js": "/Language-Learning-App/static/js/main.c592ff4e.chunk.js",
+    "main.js.map": "/Language-Learning-App/static/js/main.c592ff4e.chunk.js.map",
     "runtime-main.js": "/Language-Learning-App/static/js/runtime-main.8785ce23.js",
     "runtime-main.js.map": "/Language-Learning-App/static/js/runtime-main.8785ce23.js.map",
     "static/css/2.150d169a.chunk.css": "/Language-Learning-App/static/css/2.150d169a.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.150d169a.chunk.css",
     "static/js/2.16aa2141.chunk.js",
     "static/css/main.22689ff0.chunk.css",
-    "static/js/main.bd89ec5b.chunk.js"
+    "static/js/main.c592ff4e.chunk.js"
   ]
 }
